@@ -1,130 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="BOTTOM_CENTER" fillWidth="false" maxHeight="650.0" maxWidth="740.0" minHeight="595.0" minWidth="680.0"
-      spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.th3alexdev.petcarejava.PrincipalController">
+<VBox alignment="BOTTOM_CENTER" fillWidth="false" maxHeight="669.0" maxWidth="740.0" minHeight="595.0" minWidth="680.0" prefHeight="669.0" prefWidth="680.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.th3alexdev.petcarejava.controllers.FormController">
    <padding>
-      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
    </padding>
-   <HBox alignment="CENTER" prefHeight="486.0" prefWidth="661.0">
-      <VBox prefHeight="486.0" prefWidth="311.0">
+   <HBox alignment="CENTER" prefHeight="571.0" prefWidth="661.0">
+      <VBox alignment="CENTER" prefHeight="517.0" prefWidth="311.0">
          <padding>
-            <Insets right="12.0"/>
+            <Insets right="12.0" />
          </padding>
-         <VBox prefHeight="424.0" prefWidth="257.0">
-            <VBox.margin>
-               <Insets bottom="12.0"/>
-            </VBox.margin>
-            <Label prefHeight="17.0" prefWidth="260.0" text="Mascota " textAlignment="CENTER">
-               <VBox.margin>
-                  <Insets bottom="6.0"/>
-               </VBox.margin>
-               <font>
-                  <Font name="System Bold" size="12.0"/>
-               </font>
-            </Label>
-            <VBox prefHeight="45.0" prefWidth="257.0">
-               <opaqueInsets>
-                  <Insets bottom="10.0"/>
-               </opaqueInsets>
-               <VBox.margin>
-                  <Insets bottom="3.0"/>
-               </VBox.margin>
-               <Label prefHeight="17.0" prefWidth="260.0" text="Nombre" textAlignment="CENTER"/>
-               <TextField fx:id="petname" prefHeight="25.0" prefWidth="293.0">
+         <VBox prefHeight="224.0" prefWidth="299.0">
+            <children>
+               <Label prefHeight="17.0" prefWidth="260.0" text="Your pet " textAlignment="CENTER">
+                  <VBox.margin>
+                     <Insets bottom="6.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <VBox prefHeight="45.0" prefWidth="257.0">
                   <opaqueInsets>
-                     <Insets/>
+                     <Insets bottom="10.0" />
                   </opaqueInsets>
-               </TextField>
-            </VBox>
-            <VBox layoutX="10.0" layoutY="33.0" prefHeight="45.0" prefWidth="257.0">
-               <VBox.margin>
-                  <Insets bottom="3.0"/>
-               </VBox.margin>
-               <Label prefHeight="17.0" prefWidth="260.0" text="Raza" textAlignment="CENTER"/>
-               <TextField fx:id="petbreed" prefHeight="25.0" prefWidth="293.0"/>
-            </VBox>
-            <VBox layoutX="10.0" layoutY="88.0" prefHeight="45.0" prefWidth="257.0">
-               <VBox.margin>
-                  <Insets bottom="3.0"/>
-               </VBox.margin>
-               <Label prefHeight="17.0" prefWidth="260.0" text="Color" textAlignment="CENTER"/>
-               <TextField fx:id="petcolor" prefHeight="25.0" prefWidth="293.0"/>
-            </VBox>
-            <HBox prefHeight="22.0" prefWidth="257.0">
-               <VBox.margin>
-                  <Insets bottom="3.0"/>
-               </VBox.margin>
-               <CheckBox fx:id="isAllergic" mnemonicParsing="false"/>
-               <Label prefHeight="17.0" prefWidth="76.0" text="Alergias" textAlignment="CENTER">
-                  <HBox.margin>
-                     <Insets left="8.0"/>
-                  </HBox.margin>
-               </Label>
-            </HBox>
-            <HBox layoutX="10.0" layoutY="177.0" prefHeight="22.0" prefWidth="257.0">
-               <VBox.margin>
-                  <Insets bottom="3.0"/>
-               </VBox.margin>
-               <CheckBox fx:id="specialAttention" mnemonicParsing="false"/>
-               <Label prefHeight="17.0" prefWidth="99.0" text="Atención Especial" textAlignment="CENTER">
-                  <HBox.margin>
-                     <Insets left="8.0"/>
-                  </HBox.margin>
-               </Label>
-            </HBox>
+                  <VBox.margin>
+                     <Insets bottom="3.0" />
+                  </VBox.margin>
+                  <Label prefHeight="17.0" prefWidth="260.0" text="Name" textAlignment="CENTER" />
+                  <TextField fx:id="petname" prefHeight="25.0" prefWidth="293.0" promptText="Andy">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </VBox>
+               <VBox prefHeight="45.0" prefWidth="257.0">
+                  <VBox.margin>
+                     <Insets bottom="3.0" />
+                  </VBox.margin>
+                  <Label prefHeight="17.0" prefWidth="260.0" text="Breed" textAlignment="CENTER" />
+                  <TextField fx:id="petbreed" prefHeight="25.0" prefWidth="293.0" promptText="Labrador" />
+               </VBox>
+               <VBox prefHeight="45.0" prefWidth="257.0">
+                  <VBox.margin>
+                     <Insets bottom="3.0" />
+                  </VBox.margin>
+                  <Label prefHeight="17.0" prefWidth="260.0" text="Color" textAlignment="CENTER" />
+                  <TextField fx:id="petcolor" prefHeight="25.0" prefWidth="293.0" promptText="Brown" />
+               </VBox>
+               <HBox prefHeight="22.0" prefWidth="257.0">
+                  <VBox.margin>
+                     <Insets bottom="3.0" />
+                  </VBox.margin>
+                  <CheckBox fx:id="isAllergic" mnemonicParsing="false">
+                     <graphic>
+                        <Label prefHeight="17.0" prefWidth="158.0" text="Is your pet allergic?" textAlignment="CENTER">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </Label>
+                     </graphic></CheckBox>
+               </HBox>
+               <HBox prefHeight="22.0" prefWidth="257.0">
+                  <CheckBox fx:id="specialAttention" mnemonicParsing="false">
+                     <graphic>
+                        <Label prefHeight="17.0" prefWidth="237.0" text="Does your pet need special attention?" textAlignment="CENTER">
+                           <padding>
+                              <Insets left="8.0" />
+                           </padding>
+                        </Label>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></CheckBox>
+               </HBox>
+            </children>
          </VBox>
-         <VBox prefHeight="424.0" prefWidth="257.0">
-            <Label prefHeight="17.0" prefWidth="260.0" text="Dueño" textAlignment="CENTER">
+         <VBox prefHeight="207.0" prefWidth="299.0">
+            <Label prefHeight="17.0" prefWidth="260.0" text="Owner" textAlignment="CENTER">
                <VBox.margin>
-                  <Insets bottom="6.0"/>
+                  <Insets bottom="6.0" />
                </VBox.margin>
                <font>
-                  <Font name="System Bold" size="12.0"/>
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
             <VBox prefHeight="45.0" prefWidth="257.0">
                <opaqueInsets>
-                  <Insets bottom="10.0"/>
+                  <Insets bottom="10.0" />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets bottom="3.0"/>
+                  <Insets bottom="3.0" />
                </VBox.margin>
-               <Label prefHeight="17.0" prefWidth="260.0" text="Nombre" textAlignment="CENTER"/>
-               <TextField fx:id="ownername" prefHeight="25.0" prefWidth="293.0">
+               <Label prefHeight="17.0" prefWidth="260.0" text="Name" textAlignment="CENTER" />
+               <TextField fx:id="ownername" prefHeight="25.0" prefWidth="293.0" promptText="Alex">
                   <opaqueInsets>
-                     <Insets/>
+                     <Insets />
                   </opaqueInsets>
                </TextField>
             </VBox>
             <VBox layoutX="10.0" layoutY="33.0" prefHeight="45.0" prefWidth="257.0">
                <VBox.margin>
-                  <Insets bottom="3.0"/>
+                  <Insets bottom="3.0" />
                </VBox.margin>
-               <Label prefHeight="17.0" prefWidth="260.0" text="Teléfono" textAlignment="CENTER"/>
-               <TextField fx:id="ownerphone" prefHeight="25.0" prefWidth="293.0"/>
+               <Label prefHeight="17.0" prefWidth="260.0" text="Phone" textAlignment="CENTER" />
+               <TextField fx:id="ownerphone" prefHeight="25.0" prefWidth="293.0" promptText="0000" />
             </VBox>
             <VBox layoutX="10.0" layoutY="88.0" prefHeight="76.0" prefWidth="275.0">
                <VBox.margin>
-                  <Insets bottom="3.0"/>
+                  <Insets bottom="3.0" />
                </VBox.margin>
-               <Label prefHeight="17.0" prefWidth="260.0" text="Observaciones" textAlignment="CENTER"/>
-               <TextArea fx:id="comments" prefHeight="66.0" prefWidth="275.0"/>
+               <Label prefHeight="17.0" prefWidth="260.0" text="Comments" textAlignment="CENTER" />
+               <TextArea fx:id="ownercomments" prefHeight="126.0" prefWidth="299.0" />
             </VBox>
          </VBox>
+         <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="299.0">
+            <children>
+               <Button fx:id="submit" mnemonicParsing="false" onAction="#onSubmit" prefHeight="38.0" prefWidth="106.0" text="Submit">
+                  <HBox.margin>
+                     <Insets right="12.0" />
+                  </HBox.margin>
+               </Button>
+               <Button fx:id="clear" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="15.0" prefWidth="0.0" textOverrun="LEADING_ELLIPSIS">
+                  <graphic>
+                     <ImageView fitHeight="20.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@assets/clear_icon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic></Button>
+            </children>
+         </HBox>
       </VBox>
-      <VBox layoutX="185.0" layoutY="10.0" prefHeight="486.0" prefWidth="311.0">
+      <VBox layoutX="185.0" layoutY="10.0" prefHeight="486.0" prefWidth="298.0">
          <padding>
-            <Insets left="12.0"/>
+            <Insets left="12.0" />
          </padding>
       </VBox>
    </HBox>
