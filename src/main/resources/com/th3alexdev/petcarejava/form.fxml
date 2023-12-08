@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="BOTTOM_CENTER" fillWidth="false" maxHeight="650.0" maxWidth="740.0" minHeight="595.0" minWidth="680.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.th3alexdev.petcarejava.PrincipalController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="486.0" prefWidth="661.0">
+         <children>
+            <VBox prefHeight="486.0" prefWidth="311.0">
+               <children>
+                  <VBox prefHeight="424.0" prefWidth="257.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="260.0" text="Mascota " textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="6.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="45.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="260.0" text="Nombre" textAlignment="CENTER" />
+                              <TextField prefHeight="25.0" prefWidth="293.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                           </children>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="33.0" prefHeight="45.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="260.0" text="Raza" textAlignment="CENTER" />
+                              <TextField prefHeight="25.0" prefWidth="293.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="88.0" prefHeight="45.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="260.0" text="Color" textAlignment="CENTER" />
+                              <TextField prefHeight="25.0" prefWidth="293.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox prefHeight="22.0" prefWidth="257.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" />
+                              <Label prefHeight="17.0" prefWidth="76.0" text="Alergias" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="177.0" prefHeight="22.0" prefWidth="257.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" />
+                              <Label prefHeight="17.0" prefWidth="99.0" text="Atención Especial" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="424.0" prefWidth="257.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="260.0" text="Dueño" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="6.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="45.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="260.0" text="Nombre" textAlignment="CENTER" />
+                              <TextField prefHeight="25.0" prefWidth="293.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TextField>
+                           </children>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="33.0" prefHeight="45.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="260.0" text="Teléfono" textAlignment="CENTER" />
+                              <TextField prefHeight="25.0" prefWidth="293.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="88.0" prefHeight="76.0" prefWidth="275.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="260.0" text="Observaciones" textAlignment="CENTER" />
+                              <TextArea prefHeight="66.0" prefWidth="275.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="3.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="12.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="185.0" layoutY="10.0" prefHeight="486.0" prefWidth="311.0">
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</VBox>
