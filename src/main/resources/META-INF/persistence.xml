@@ -2,8 +2,10 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="petcarejpa" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.th3alexdev.petcarejava.models.Owner</class>
+        <class>com.th3alexdev.petcarejava.models.Pet</class>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhostt:3306/petcare"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhostt:3306/petcare?serverTimezone=UTC"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value=""/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.driver"/>

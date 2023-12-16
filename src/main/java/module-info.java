@@ -1,6 +1,7 @@
 module com.th3alexdev.petcarejava {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jakarta.persistence;
 
 
     exports com.th3alexdev.petcarejava;
