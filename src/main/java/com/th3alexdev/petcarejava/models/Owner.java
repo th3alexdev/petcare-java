@@ -1,12 +1,21 @@
 package com.th3alexdev.petcarejava.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table (name="owners")
 public class Owner {
-    private Integer id;
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
+    private Long id_owner;
     private String name;
     private String phone;
-    private static int lastId;
+    private static Long lastId;
 
-    public Owner(Integer id) {
+    public Owner() {}
+
+    public Owner(Long id) {
         this.id = ++lastId;
     }
 
@@ -15,12 +24,11 @@ public class Owner {
         this.phone = phone;
     }
 
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,11 +48,11 @@ public class Owner {
         this.phone = phone;
     }
 
-    public static int getLastId() {
+    public static Long getLastId() {
         return lastId;
     }
 
-    public static void setLastId(int lastId) {
+    public static void setLastId(Long lastId) {
         Owner.lastId = lastId;
     }
 }

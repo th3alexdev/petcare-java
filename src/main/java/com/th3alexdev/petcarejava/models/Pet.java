@@ -1,5 +1,8 @@
 package com.th3alexdev.petcarejava.models;
+import jakarta.persistence.*;
 
+@Entity
+@Table (name="pets")
 public class Pet {
 
     /*
@@ -9,9 +12,12 @@ public class Pet {
        This will generate duplicate rows in the database,
        but the entity relationship will be optimized in future features. (N-1)
     */
-    private Owner owner;
+    @OneToOne
+    private Owner id_owner;
 
-    private Integer clientNumber;
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private String breed;
     private String color;
@@ -19,15 +25,17 @@ public class Pet {
     private Boolean isAllergic;
     private Boolean specialAttention;
 
-    private static int lastClientNumber;
+    private static Long lastClientNumber;
 
-    public Pet(Integer clientNumber) {
-        this.clientNumber = ++lastClientNumber;
+    public Pet() {}
+
+    public Pet(Long id) {
+        this.id = ++lastClientNumber;
     }
 
     public Pet(Owner owner, String name, String breed, String color, String comments, Boolean isAllergic, Boolean specialAttention) {
-        this.owner = owner;
         this.name = name;
+        this.id_owner = owner;
         this.breed = breed;
         this.color = color;
         this.comments = comments;
@@ -84,10 +92,10 @@ public class Pet {
     }
 
     public Owner getOwner() {
-        return owner;
+        return id_owner;
     }
 
     public void setOwner(Owner owner) {
-        this.owner = owner;
+        this.id_owner = owner;
     }
 }
