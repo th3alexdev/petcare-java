@@ -1,23 +1,24 @@
 package com.th3alexdev.petcarejava.models;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table (name="pets")
+@Table(name="pets")
 public class Pet {
 
     /*
-       In this project, a pet only has one owner (single person responsible)
-       that is, the entity-relationship is 1-1.
+        In this project, a pet only has one owner (single person responsible)
+        that is, the entity-relationship is 1-1.
 
-       This will generate duplicate rows in the database,
-       but the entity relationship will be optimized in future features. (N-1)
-    */
-    @OneToOne
-    private Owner id_owner;
+        This will generate duplicate rows in the database,
+        but the entity relationship will be optimized in future features. (N-1)
+     */
+    // @OneToOne
+    // private Owner id_owner;
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String name;
     private String breed;
     private String color;
@@ -25,22 +26,36 @@ public class Pet {
     private Boolean isAllergic;
     private Boolean specialAttention;
 
-    private static Long lastClientNumber;
-
     public Pet() {}
 
-    public Pet(Long id) {
-        this.id = ++lastClientNumber;
-    }
-
-    public Pet(Owner owner, String name, String breed, String color, String comments, Boolean isAllergic, Boolean specialAttention) {
+    public Pet(String name, String breed, String color, String comments, Boolean isAllergic, Boolean specialAttention) {
         this.name = name;
-        this.id_owner = owner;
         this.breed = breed;
         this.color = color;
         this.comments = comments;
         this.isAllergic = isAllergic;
         this.specialAttention = specialAttention;
+    }
+
+    @Override
+    public String toString() {
+        return "{ " + '\n' +
+                "\tid=" + id + ",\n" +
+                "\tname='" + name + '\'' + ",\n" +
+                "\tbreed='" + breed + '\'' + ",\n" +
+                "\tcolor='" + color + '\'' + ",\n" +
+                "\tcomments='" + comments + '\'' + ",\n" +
+                "\tisAllergic=" + isAllergic + ",\n" +
+                "\tspecialAttention=" + specialAttention + '\n' +
+                '}';
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -89,13 +104,5 @@ public class Pet {
 
     public void setSpecialAttention(Boolean specialAttention) {
         this.specialAttention = specialAttention;
-    }
-
-    public Owner getOwner() {
-        return id_owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.id_owner = owner;
     }
 }
