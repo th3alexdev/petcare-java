@@ -1,10 +1,10 @@
-package com.th3alexdev.petcarejava.utils;
+package com.th3alexdev.petcarejava.persistence;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class PersistenceManager {
+public class PersistenceController {
     private static final EntityManagerFactory entityManagerFactory = entityManagerFactoryProvider();
 
     private static EntityManagerFactory entityManagerFactoryProvider(){
