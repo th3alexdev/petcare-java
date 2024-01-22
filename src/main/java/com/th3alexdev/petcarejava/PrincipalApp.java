@@ -1,7 +1,7 @@
 package com.th3alexdev.petcarejava;
 
 import com.th3alexdev.petcarejava.models.Pet;
-import com.th3alexdev.petcarejava.utils.PersistenceManager;
+import com.th3alexdev.petcarejava.persistence.PersistenceController;
 import jakarta.persistence.EntityManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,13 +22,13 @@ public class  PrincipalApp extends Application {
     }
 
     public static void main(String[] args) {
-        //launch();
+        launch();
 
-        EntityManager em = PersistenceManager.getEntityManager();
-        List<Pet> pets = em.createQuery("SELECT p FROM Pet p WHERE p.name='Andy'", Pet.class).getResultList();
-        for (Pet pet: pets) {
-            System.out.println(pet);
-        }
-        em.close();
+        // EntityManager em = PersistenceController.getEntityManager();
+        // List<Pet> pets = em.createQuery("SELECT p FROM Pet p", Pet.class).getResultList();
+        // for (Pet pet: pets) {
+        //    System.out.println(pet);
+        //}
+        //em.close();
     }
 }
