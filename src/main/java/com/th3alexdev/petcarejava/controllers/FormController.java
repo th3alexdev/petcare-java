@@ -1,5 +1,7 @@
 package com.th3alexdev.petcarejava.controllers;
 
+import com.th3alexdev.petcarejava.models.Pet;
+import com.th3alexdev.petcarejava.services.PetService;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
@@ -27,6 +29,8 @@ public class FormController {
     @FXML
     private TextArea ownercomments;
 
+    private PetService serviceController = new PetService();
+
 
     private List<TextField> inputList;
 
@@ -39,8 +43,21 @@ public class FormController {
         inputList.add(ownerphone);
     }
 
+    // serviceController = new PetService();
+
     public void onSubmit() {
-        System.out.println("submitted!");
+        serviceController.save(
+                petname.getText(),
+                petbreed.getText(),
+                petcolor.getText(),
+                ownername.getText(),
+                ownerphone.getText(),
+                ownercomments.getText(),
+                isAllergic.isSelected(),
+                specialAttention.isSelected()
+        );
+
+        clearForm();
     }
 
     public void clearForm() {
