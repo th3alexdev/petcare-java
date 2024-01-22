@@ -55,4 +55,14 @@ public class Owner {
     public static void setLastId(Long lastId) {
         Owner.lastId = lastId;
     }
+
+    @Override
+    public String toString() {
+        return "Owner {" +
+                "\tid=" + id + ",\n" +
+                "\tid_owner=" + id_owner + ",\n" +
+                "\tname='" + name + '\'' + ",\n" +
+                "\tphone='" + phone + '\'' + '\n' +
+                '}';
+    }
 }

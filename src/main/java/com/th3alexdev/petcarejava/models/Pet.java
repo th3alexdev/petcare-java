@@ -90,11 +90,11 @@ public class Pet {
         this.comments = comments;
     }
 
-    public Boolean getAllergic() {
+    public Boolean getIsAllergic() {
         return isAllergic;
     }
 
-    public void setAllergic(Boolean allergic) {
+    public void setIsAllergic(Boolean allergic) {
         isAllergic = allergic;
     }
 
