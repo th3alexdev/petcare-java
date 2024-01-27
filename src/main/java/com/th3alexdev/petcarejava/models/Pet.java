@@ -13,8 +13,8 @@ public class Pet {
         This will generate duplicate rows in the database,
         but the entity relationship will be optimized in future features. (N-1)
      */
-    // @OneToOne
-    // private Owner id_owner;
+    @OneToOne
+    private Owner id_owner;
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -28,25 +28,35 @@ public class Pet {
 
     public Pet() {}
 
-    public Pet(String name, String breed, String color, String comments, Boolean isAllergic, Boolean specialAttention) {
+    public Pet(String name, String breed, String color, String comments, Boolean isAllergic, Boolean specialAttention, Owner owner) {
         this.name = name;
         this.breed = breed;
         this.color = color;
         this.comments = comments;
         this.isAllergic = isAllergic;
         this.specialAttention = specialAttention;
+        this.id_owner = owner;
+    }
+
+    public Owner getOwner() {
+        return id_owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.id_owner = owner;
     }
 
     @Override
     public String toString() {
-        return "{ " + '\n' +
+        return "Pet -> { " + '\n' +
                 "\tid=" + id + ",\n" +
                 "\tname='" + name + '\'' + ",\n" +
                 "\tbreed='" + breed + '\'' + ",\n" +
                 "\tcolor='" + color + '\'' + ",\n" +
                 "\tcomments='" + comments + '\'' + ",\n" +
                 "\tisAllergic=" + isAllergic + ",\n" +
-                "\tspecialAttention=" + specialAttention + '\n' +
+                "\tspecialAttention=" + specialAttention + ",\n" +
+                "\towner=" + id_owner + '\n' +
                 '}';
     }
 
