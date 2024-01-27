@@ -13,6 +13,9 @@ public class Owner {
     private String phone;
     private static Long lastId;
 
+    @OneToOne(mappedBy = "id_owner")
+    private Pet pet;
+
     public Owner() {}
 
     public Owner(Long id) {
@@ -58,7 +61,7 @@ public class Owner {
 
     @Override
     public String toString() {
-        return "Owner {" +
+        return "Owner -> {" + '\n' +
                 "\tid=" + id + ",\n" +
                 "\tid_owner=" + id_owner + ",\n" +
                 "\tname='" + name + '\'' + ",\n" +
