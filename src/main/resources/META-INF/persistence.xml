@@ -3,6 +3,7 @@
     <persistence-unit name="petcarejpa" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.th3alexdev.petcarejava.models.Pet</class>
+        <class>com.th3alexdev.petcarejava.models.Owner</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/petcare?serverTimezone=UTC"/>
