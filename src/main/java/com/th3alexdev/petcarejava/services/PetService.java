@@ -7,18 +7,20 @@ import com.th3alexdev.petcarejava.persistence.PersistenceController;
 public class PetService {
     PersistenceController persistenceController = new PersistenceController();
 
-    public void save(String petname, String petbreed,String petcolor, String ownername, String ownerphone, String ownercomments, Boolean isAllergic, Boolean specialAttention){
+    public void save(String petName, String petBreed,String petColor, String petOwnerName, String petOwnerPhone, String petOwnerComments, Boolean isAllergic, Boolean specialAttention){
+        Owner owner = new Owner();
+        owner.setName(petOwnerName);
+        owner.setPhone(petOwnerPhone);
+        
         Pet pet = new Pet();
-        pet.setName(petname);
-        pet.setBreed(petbreed);
-        pet.setColor(petcolor);
-        pet.setComments(ownercomments);
+        pet.setName(petName);
+        pet.setBreed(petBreed);
+        pet.setColor(petColor);
         pet.setIsAllergic(isAllergic);
         pet.setSpecialAttention(specialAttention);
 
-        Owner owner = new Owner();
-        owner.setName(ownername);
-        owner.setPhone(ownerphone);
+        pet.setOwner(owner);
+        // pet.setComments(petOwnerComments);
 
         System.out.println(pet.toString());
         System.out.println(owner.toString());
